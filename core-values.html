@@ -25,10 +25,39 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103189427-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-103189427-1');
+    </script>
 </head>
 
 <body>
     <div class="nav-container sticky-top">
+        <div class="bar bar--sm visible-xs bg--white bar--absolute collapse sticky-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-md-2">
+                        <a href="index.html">
+                            <img class="logo logo-dark" alt="logo" src="img/iosd/IOSD-logo.png" />
+                            <img class="logo logo-light" alt="logo" src="img/iosd/IOSD-logo.png" />
+                            <!--<img class="logo logo-dark" alt="logo" src="img/logo-dark.png" />-->
+                            <!--<img class="logo logo-light" alt="logo" src="img/logo-light.png" />-->
+                        </a>
+                    </div>
+                    <div class="col-9 col-md-10 text-right">
+                        <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs hidden-sm">
+                            <i class="icon icon--sm stack-interface stack-menu"></i>
+                        </a>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </div>
         <div class="search header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1">
             <nav id="menu1" class="bar  bar-1 bg--white hidden-xs bar--absolute collapse sticky-top" data-scroll-class="100px:pos-fixed">
 
@@ -202,9 +231,13 @@
                             Core Values
                         </h1>
                         <p class="lead mar-sz">
-                            <p><h2>Listen.Learn.Lead.</h2></p><p class="lead mar-sz">Listen to technology professionals,learn to use the technincal tools at
-                            your disposal and lead the way for fellow tech-enthusiasts to make revolutionary
-                            advancements in tehcnology . </p>
+                            <p>
+                                <h2>Listen.Learn.Lead.</h2>
+                            </p>
+                            <p class="lead mar-sz">Listen to technology professionals,learn to use the technincal tools
+                                at
+                                your disposal and lead the way for fellow tech-enthusiasts to make revolutionary
+                                advancements in tehcnology . </p>
                     </div>
                 </div>
                 <!--end of row-->
@@ -219,7 +252,8 @@
                             <i class="icon icon--lg fas fas fa-lightbulb"></i>
                             <h4>Innovation</h4>
                             <p>
-                                We expose our students to ideas that make them think about the world around them, and many of
+                                We expose our students to ideas that make them think about the world around them, and
+                                many of
                                 our students here have dreams of social
                                 change and entrepreneurship.
                             </p>
