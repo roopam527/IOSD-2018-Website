@@ -365,10 +365,34 @@
     </div>
 </div>
 <!-- box-shadow: 0px 0px 1000px 1000px #A9A9A9 -->
+<!-- style="            position: relative;
+        text-align: center;
+        color: white;
+" -->
 <div id="hide" class="img-fluid soc shadow-lg rounded" style="position: absolute;z-index: 10;opacity: 1; padding-left: 15vw; padding-right: 15vw; margin:0% ; top: 25vh;" width='70vw'>
-    <a href="http://soc.iosd.tech/"> <img class="shadow-lg rounded img-fluid" style="border-radius:40px;box-shadow: 0 4px 8px 0 #00bfff, 0 6px 20px 0 #00bfff;" src="img/mod.png"/> </a>
+    <a href="http://soc.iosd.tech/"> <img class="shadow-lg rounded img-fluid" style="border-radius:40px;box-shadow: 0 4px 8px 0 #00bfff, 0 6px 20px 0 #00bfff;" src="img/mod.png" /> </a>
+    <a id="close" class="top-right" style="background-color: #00bfff; border: none; color: white;
+        height: 5vh;
+        width: 5vh;
+        /* padding: 5px;  */
+        text-align: center;
+        display: inline-block;
+        /* font-size: 16px; */
+        /* margin: 4px 2px; */
+        border-radius: 50%;
+      ">
+        <i class="fa fa-close"></i>
+    </a>
     </div>
 </div>
+    <style>
+        /* .container             } */
+        .top-right {
+            position: absolute;
+            top: -2vh;
+            right: 14vw;
+            }
+    </style>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/flickity.min.js"></script>
     <script src="js/easypiechart.min.js"></script>
@@ -402,8 +426,9 @@
 
     </script>
     <script>
-       var hide=document.getElementById('hide')
-       var showthis=document.getElementById('showthis')
+        var hide=document.getElementById('hide')
+        var showthis=document.getElementById('showthis')
+        var close=document.getElementById('close')
         showthis.classList.add('lighht')
         $(".ui-widget-overlay").addClass('modal-opened');
         $('#bdy').addClass('d');
@@ -412,16 +437,26 @@
             $(".ui-widget-overlay").removeClass('modal-opened');
             $('#bdy').removeClass('d');
             hide.classList.add('moal-open')
-           hide.classList.add('hide')
-           showthis.classList.remove('lighht')
-           if (Hls.isSupported()) {
+            hide.classList.add('hide')
+            showthis.classList.remove('lighht')
+            if (Hls.isSupported()) {
                console.log('a')
-        } else {
-            console.log('b')
-        }
-    })
-    
-    
+            } else {
+                console.log('b')
+            }
+        })  
+        close.addEventListener('click',function(){
+            $(".ui-widget-overlay").removeClass('modal-opened');
+            $('#bdy').removeClass('d');
+            hide.classList.add('moal-open')
+            hide.classList.add('hide')
+            showthis.classList.remove('lighht')
+            if (Hls.isSupported()) {
+               console.log('a')
+            } else {
+                console.log('b')
+            }
+        })  
     </script>
 </body>
 
