@@ -414,27 +414,29 @@
         var showthis=document.getElementById('showthis')
         var close=document.getElementById('close')
         showthis.classList.add('lighht')
-        getElementByClass('ui-widget-overlay').addClass('modal-opened');
-        getElementById('bdy').addClass('d');
+        // document.getElementsByClassName('ui-widget-overlay').classList.add('modal-opened');
+        document.getElementById('bdy').classList.add('d');
         hide.classList.remove('hide')
         showthis.addEventListener('click',function(){
-            getElementByClass('ui-widget-overlay').removeClass('modal-opened');
-            getElementById('bdy').removeClass('d');
+            // document.getElementsByClassName('ui-widget-overlay').removeClass('modal-opened');
+            document.getElementById('bdy').classList.remove('d');
             hide.classList.add('moal-open')
             hide.classList.add('hide')
             showthis.classList.remove('lighht')
+            // hide.style.display = "none";
             if (Hls.isSupported()) {
-               console.log('a')
+                console.log('a')
             } else {
                 console.log('b')
             }
         })  
         close.addEventListener('click',function(){
-            getElementByClass('ui-widget-overlay').removeClass('modal-opened');
-            getElementById('bdy').removeClass('d');
+            // document.getElementsByClassName('ui-widget-overlay').classList.remove('modal-opened');
+            document.getElementById('bdy').classList.remove('d');
             hide.classList.add('moal-open')
             hide.classList.add('hide')
             showthis.classList.remove('lighht')
+            // hide.style.display = "none";
             if (Hls.isSupported()) {
                console.log('a')
             } else {
