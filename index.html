@@ -258,7 +258,7 @@
         </section>
 
 
-        <footer class="footer-3 text-center-xs space--xs ">
+        <footer id="foooter" class="footer-3 text-center-xs space--xs darkk">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
@@ -415,16 +415,17 @@
        var close=document.getElementById('close');
        showthis.classList.add('lighht')
        hide.classList.remove('hide')
+
        showthis.addEventListener('click',function(){
         hide.classList.add('hide')
         showthis.classList.remove('lighht')
-
+document.getElementById('foooter').classList.remove('darkk')
        })
        
        close.addEventListener('click',function(){
         hide.classList.add('hide')
         showthis.classList.remove('lighht')
- 
+        document.getElementById('foooter').classList.remove('darkk')
        })
        
     </script>
