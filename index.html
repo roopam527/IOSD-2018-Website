@@ -38,23 +38,11 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'UA-103189427-1');
     </script>
-    <style type="text/css" media="all">
-    .ui-widget-overlay .modal-open {
-        background: rgb(0, 0, 0 , 0);
-        opacity: 0.01;
-        filter: Alpha(Opacity=1);         
-    }
-    .d{
-        color: black;
-        background-color: black;
-    }
-    </style>
 </head>
 
-<body id="bdy" class="d" >
+<body>
     <div style="position: relative" >
         <div id="showthis">
     <div class="nav-container sticky-top">
@@ -270,7 +258,7 @@
         </section>
 
 
-        <footer class="footer-3 text-center-xs space--xs ">
+        <footer id="foooter" class="footer-3 text-center-xs space--xs darkk">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
@@ -364,14 +352,11 @@
         </a>
     </div>
 </div>
-<!-- box-shadow: 0px 0px 1000px 1000px #A9A9A9 -->
-<!-- style="            position: relative;
-        text-align: center;
-        color: white;
-" -->
-<div id="hide" class="img-fluid soc shadow-lg rounded" style="position: absolute;z-index: 10;opacity: 1; padding-left: 15vw; padding-right: 15vw; margin:0% ; top: 25vh;" width='70vw'>
-    <a href="http://soc.iosd.tech/"> <img class="shadow-lg rounded img-fluid" style="border-radius:40px;box-shadow: 0 4px 8px 0 #00bfff, 0 6px 20px 0 #00bfff;" src="img/mod.png" /> </a>
-    <a id="close" class="top-right" style="background-color: #00bfff; border: none; color: white;
+    <div id="hide" class="img-fluid soc shadow-lg rounded" style="position: absolute;z-index: 10;opacity: 1;padding-left: 15vw; padding-right: 15vw; margin:0% ; top: 25vh; " >
+            <a href="http://soc.iosd.tech/"> <img class="shadow-lg rounded img-fluid" style=
+            "border-radius:40px;box-shadow: 0 4px 8px 0 #00bfff, 0 6px 20px 0 #00bfff;;
+            " src="./img/mod.png"/> 
+             <a id="close" class="top-right" style="background-color: #00bfff; border: none; color: white;
         height: 5vh;
         width: 5vh;
         /* padding: 5px;  */
@@ -382,17 +367,17 @@
         border-radius: 50%;
       ">
         <i class="fa fa-close"></i>
-    </a>
+    </a></a>
+         </div>
+         <style>
+            /* .container              */
+            .top-right {
+                position: absolute;
+                top: -2vh;
+                right: 14vw;
+                }
+        </style>
     </div>
-</div>
-    <style>
-        /* .container             } */
-        .top-right {
-            position: absolute;
-            top: -2vh;
-            right: 14vw;
-            }
-    </style>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/flickity.min.js"></script>
     <script src="js/easypiechart.min.js"></script>
@@ -410,41 +395,6 @@
     <script src="js/smooth-scroll.min.js"></script>
     <script src="js/scripts.js"></script>
     <script>
-        var hide=document.getElementById('hide')
-        var showthis=document.getElementById('showthis')
-        var close=document.getElementById('close')
-        showthis.classList.add('lighht')
-        // document.getElementsByClassName('ui-widget-overlay').classList.add('modal-opened');
-        document.getElementById('bdy').classList.add('d');
-        hide.classList.remove('hide')
-        showthis.addEventListener('click',function(){
-            // document.getElementsByClassName('ui-widget-overlay').removeClass('modal-opened');
-            document.getElementById('bdy').classList.remove('d');
-            hide.classList.add('moal-open')
-            hide.classList.add('hide')
-            showthis.classList.remove('lighht')
-            // hide.style.display = "none";
-            if (Hls.isSupported()) {
-                console.log('a')
-            } else {
-                console.log('b')
-            }
-        })  
-        close.addEventListener('click',function(){
-            // document.getElementsByClassName('ui-widget-overlay').classList.remove('modal-opened');
-            document.getElementById('bdy').classList.remove('d');
-            hide.classList.add('moal-open')
-            hide.classList.add('hide')
-            showthis.classList.remove('lighht')
-            // hide.style.display = "none";
-            if (Hls.isSupported()) {
-               console.log('a')
-            } else {
-                console.log('b')
-            }
-        })  
-    </script>
-    <script>
         if (Hls.isSupported()) {
             var video = document.getElementById('background');
             var hls = new Hls();
@@ -458,9 +408,27 @@
             video.innerHTML = "<source src=\"video/video.webm\" type=\"video/webm\">\n" + "<source src=\"video/video.mp4\" type=\"video/mp4\">\n" + "<source src=\"video/video.ogv\" type=\"video/ogv\">\n";
         }
        
+    </script>
+    <script>
+       var hide=document.getElementById('hide')
+       var showthis=document.getElementById('showthis')
+       var close=document.getElementById('close');
+       showthis.classList.add('lighht')
+       hide.classList.remove('hide')
 
+       showthis.addEventListener('click',function(){
+        hide.classList.add('hide')
+        showthis.classList.remove('lighht')
+document.getElementById('foooter').classList.remove('darkk')
+       })
+       
+       close.addEventListener('click',function(){
+        hide.classList.add('hide')
+        showthis.classList.remove('lighht')
+        document.getElementById('foooter').classList.remove('darkk')
+       })
+       
     </script>
 
 </body>
-
 </html>
