@@ -16,14 +16,12 @@
   }
 }
 
-.darkk{
-  background-color: black
-}
 
  .hide{
    display:none;
  }
  .lighht{
+ opacity: 0.6;
 
  }
 :root {
