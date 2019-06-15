@@ -410,39 +410,6 @@
     <script src="js/smooth-scroll.min.js"></script>
     <script src="js/scripts.js"></script>
     <script>
-        var hide=document.getElementById('hide')
-        var showthis=document.getElementById('showthis')
-        var close=document.getElementById('close')
-        showthis.classList.add('lighht')
-        getElementByClass('ui-widget-overlay').addClass('modal-opened');
-        getElementById('bdy').addClass('d');
-        hide.classList.remove('hide')
-        showthis.addEventListener('click',function(){
-            getElementByClass('ui-widget-overlay').removeClass('modal-opened');
-            getElementById('bdy').removeClass('d');
-            hide.classList.add('moal-open')
-            hide.classList.add('hide')
-            showthis.classList.remove('lighht')
-            if (Hls.isSupported()) {
-               console.log('a')
-            } else {
-                console.log('b')
-            }
-        })  
-        close.addEventListener('click',function(){
-            getElementByClass('ui-widget-overlay').removeClass('modal-opened');
-            getElementById('bdy').removeClass('d');
-            hide.classList.add('moal-open')
-            hide.classList.add('hide')
-            showthis.classList.remove('lighht')
-            if (Hls.isSupported()) {
-               console.log('a')
-            } else {
-                console.log('b')
-            }
-        })  
-    </script>
-    <script>
         if (Hls.isSupported()) {
             var video = document.getElementById('background');
             var hls = new Hls();
@@ -458,7 +425,39 @@
        
 
     </script>
-
+    <script>
+        var hide=document.getElementById('hide')
+        var showthis=document.getElementById('showthis')
+        var close=document.getElementById('close')
+        showthis.classList.add('lighht')
+        $(".ui-widget-overlay").addClass('modal-opened');
+        $('#bdy').addClass('d');
+        hide.classList.remove('hide')
+        showthis.addEventListener('click',function(){
+            $(".ui-widget-overlay").removeClass('modal-opened');
+            $('#bdy').removeClass('d');
+            hide.classList.add('moal-open')
+            hide.classList.add('hide')
+            showthis.classList.remove('lighht')
+            if (Hls.isSupported()) {
+               console.log('a')
+            } else {
+                console.log('b')
+            }
+        })  
+        close.addEventListener('click',function(){
+            $(".ui-widget-overlay").removeClass('modal-opened');
+            $('#bdy').removeClass('d');
+            hide.classList.add('moal-open')
+            hide.classList.add('hide')
+            showthis.classList.remove('lighht')
+            if (Hls.isSupported()) {
+               console.log('a')
+            } else {
+                console.log('b')
+            }
+        })  
+    </script>
 </body>
 
 </html>
